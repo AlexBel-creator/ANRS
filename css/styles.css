@@ -1,9 +1,9 @@
 /* Le design system */
 
-main{
-    background-color: blue;
-}
 
+/* ______________________ Les styles ______________________ */
+
+/* _________ Les styles de texte. _________ */
 h1{
   font-family: 'Montserrat';
   font-size: 26px;
@@ -35,3 +35,132 @@ h4{
     letter-spacing: 2%;
     line-height: auto;
 }
+
+body {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2%;
+    line-height: auto;
+}
+
+
+/* _________ Les styles de couleur. c_NomDeCouleur => c = couleur _________ */
+
+/* Gris */
+.c_noir {
+    color: #000;
+}
+.c_gris1 {
+    color: #333333;
+}
+.c_gris2 {
+    color: #666666;
+}
+.c_gris3 {
+    color: #999999;
+}
+.c_gris4 {
+    color: #CCCCCC;
+}
+.c_blanc {
+    color: #FFF;
+}
+
+/* Bleu */
+.c_bleu0 {
+    color: #27527C;
+}
+.c_bleu1 {
+    color: #2C5C8C;
+}
+.c_bleu2 {
+    color: #31669B;
+}
+.c_bleu3 {
+    color: #3670AB;
+}
+.c_bleu4 {
+    color: #3B7ABA;
+}
+
+/* Jaune */
+.c_yellow0 {
+    color: #FDD35D;
+}
+.c_yellow1 {
+    color: #FED872;
+}
+.c_yellow2 {
+    color: #FEDE85;
+}
+.c_yellow3 {
+    color: #FEE39A;
+}
+.c_yellow4 {
+    color: #FEE9AE;
+}
+
+/* Orange */
+.c_orange0 {
+    color: #FA6538;
+}
+.c_orange1 {
+    color: #FA754C;
+}
+.c_orange2 {
+    color: #FB9374;
+}
+.c_orange3 {
+    color: #FB9374;
+}
+.c_orange4 {
+    color: #FBA388;
+}
+
+/* Orange Bis */
+.c_orangeBis0 {
+    color: #F77F00;
+}
+.c_orangeBis1 {
+    color: #FF890A;
+}
+.c_orangeBis2 {
+    color: #FF931F;
+}
+.c_orangeBis3 {
+    color: #FF9C33;
+}
+.c_orangeBis4 {
+    color: #FFA647;
+}
+
+/* Vert */
+.c_green0 {
+    color: #4BA37A;
+}
+.c_green1 {
+    color: #57B288;
+}
+.c_green2 {
+    color: #65B892;
+}
+.c_green3 {
+    color: #73BF9D;
+}
+.c_green4 {
+    color: #81C5A7;
+}
+
+
+/* _________ Les styles d'ombres _________ */
+.ombre1{
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.03) ;
+}
+.ombre2{
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1) ;
+}
+.ombre3{
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.15) ;
+}
+
