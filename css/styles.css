@@ -1,0 +1,37 @@
+/* Le design system */
+
+main{
+    background-color: blue;
+}
+
+h1{
+  font-family: 'Montserrat';
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 2%;
+  line-height: auto;
+}
+
+h2{
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2%;
+    line-height: auto;
+}
+
+h3{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2%;
+    line-height: auto;
+}
+
+h4{
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2%;
+    line-height: auto;
+}
