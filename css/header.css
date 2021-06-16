@@ -7,6 +7,8 @@
     box-sizing: border-box;
     width: 100%;
     height: 186px;
+    position: fixed;
+    top: 0px;
 }
 
 nav h1 {
@@ -19,7 +21,7 @@ nav h1 {
 }
 
 .search_box {
-    position: fixed;
+    position: inherit;
     width: 335px;
     height: 46px;
     border-radius: 12px;

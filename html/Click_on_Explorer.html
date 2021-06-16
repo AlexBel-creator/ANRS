@@ -18,13 +18,144 @@
     <link rel="stylesheet" href="../css/styles.css">
     <!-- La navbar -->
     <link rel="stylesheet" href="../css/navbar.css">
+    <!-- Le header -->
+    <link rel="stylesheet" href="../css/header.css">
+
+    <style>
+        /* Global */
+        .Icons {
+            background-color: #F5F5F5;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            align-content: space-around;
+
+            height: 100vh;
+        }
+
+        p {
+            height: 186px;
+        }
+
+        .Label {
+            display: grid;
+            justify-items: center;
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-    <h1 class="c_bleu1">Bonjour !</h1>
-    
+    <nav>
+
+        <!-- Header -->
+        <div class ="header">
+            <h1>Bonjour, Paul</h1>
+            <div class ="search_box">
+                <table class="elementsContainer">
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="Cherche ce dont tu as besoin..."
+                            class="search">
+                        </td>
+                        <td>
+                            <a href="#">
+                                <i class="material-icons">search</i>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <p>Bonjour !</p>
+
+        <div class="Icons">
+            <!-- Communauté -->
+            <a href="#" class="item">
+                <img src="../Ressources/Click on Explorer/Communauté.png" alt="Communauté">
+                <span class="Label c_bleu0">Explorer</span>
+            </a>
+
+            <!-- Planning -->
+            <a href="#">
+                <img src="../Ressources/Click on Explorer/Planning.png" alt="Planning">
+                <span class="Label c_bleu0">Planning</span>
+            </a>
+
+            <!-- Infrastructure -->
+            <a href="#">
+                <img src="../Ressources/Click on Explorer/Infrastructures.png" alt="Infrastructures">
+                <span class="Label c_bleu0">Planning</span>
+            </a>
+
+            <!-- Formations -->
+            <a href="#">
+                <img src="../Ressources/Click on Explorer/Formations.png" alt="Formations">
+                <span class="Label c_bleu0">Planning</span>
+            </a>
+
+            <!-- Progression -->
+            <a href="#">
+                <img src="../Ressources/Click on Explorer/Progression.png" alt="Progression">
+                <span class="Label c_bleu0">Planning</span>
+            </a>
+
+            <!-- Témoignages -->
+            <a href="#">
+                <img src="../Ressources/Click on Explorer/Témoignages.png" alt="Témoignages">
+                <span class="Label c_bleu0">Planning</span>
+            </a>
+
+            <!-- Apprendre -->
+            <a href="#">
+                <img src="../Ressources/Click on Explorer/Apprendre.png" alt="Apprendre">
+                <span class="Label c_bleu0">Planning</span>
+            </a>
+
+            <!-- FAQ -->
+            <a href="#">
+                <img src="../Ressources/Click on Explorer/FAQ.png" alt="FAQ">
+                <span class="Label c_bleu0">Planning</span>
+            </a>
+
+            <!-- Projet -->
+            <a href="#">
+                <img src="../Ressources/Click on Explorer/Projet.png" alt="Projet">
+                <span class="Label">Planning</span>
+            </a>
+
+            <!-- Parrainage -->
+            <a href="#">
+                <img src="../Ressources/Click on Explorer/AlumniResaux_des_anciens.png" alt="Parrainage">
+                <span class="Label">Planning</span>
+            </a>
+
+        </div>
+
+        <!-- Barre de navigation -->
+        <div class ="nav">
+            <!-- L'icône pour l'accueil (maison) -->
+            <a href="#" class="nav__link nav__link--activeBlue">
+                <i class="material-icons nav__icon">home</i>
+                <span class="nav__text">Home</span>
+            </a>
+            <!-- L'icône pour Explorer -->
+            <a href="#" class="nav__link">
+                <i class="material-icons nav__icon">explore</i>
+                <span class="nav__text">Explorer</span>
+            </a>
+            <!-- L'icône pour le profil -->
+            <a href="#" class="nav__link">
+                <i class="material-icons nav__icon">account_circle</i>
+                <span class="nav__text">Profil</span>
+            </a>
+        </div>
+
+    </nav>
+
 </body>
 
 </html>
