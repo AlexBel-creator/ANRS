@@ -1,6 +1,7 @@
 /* Le header de base des pages. */
 
 .header {
+    z-index: 5;
     margin: 0px;
     padding: 0px;
     background-color: #3B7ABA;

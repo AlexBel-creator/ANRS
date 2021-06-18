@@ -14,32 +14,66 @@
     <!-- CSS -->
     <!-- CSS - reset -->
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
-    <!-- Les styles -->
+    <!-- Styles -->
     <link rel="stylesheet" href="../css/styles.css">
-    <!-- La navbar -->
+    <!-- Navbar -->
     <link rel="stylesheet" href="../css/navbar.css">
-    <!-- Le header -->
+    <!-- Header -->
     <link rel="stylesheet" href="../css/header.css">
 
     <style>
-        /* Global */
+        /* Icons and labels */
         .Icons {
             background-color: #F5F5F5;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             justify-items: center;
             align-content: space-around;
-
-            height: 100vh;
+            height: 80vh;
         }
-
-        p {
-            height: 186px;
-        }
-
         .Label {
             display: grid;
             justify-items: center;
+            position: relative;
+            text-align: center;
+            top: 10px;
+        }
+        img {
+            height: 81px;
+        }
+        a:link, a:visited {
+            text-decoration: none;
+            color: #27527C;
+        }
+        nav>img {
+            position: relative;
+            box-sizing: border-box;
+            z-index: 1;
+            height: 70px;
+            top: 84px;
+            left: 93px;
+        }
+
+        /* Centering of uncentered icons */
+        #Communauté {
+            position: relative;
+            left: 10px;
+        }
+        #Infrastructures {
+            position: relative;
+            left: 12px;
+        }
+        #Témoignages {
+            position: relative;
+            left: 8px;
+        }
+        /* Other */
+        nav>p {
+            height: 116px;
+        }
+
+        p#bas {
+            height: 30px;
         }
 
     </style>
@@ -49,7 +83,6 @@
 <body>
 
     <nav>
-
         <!-- Header -->
         <div class ="header">
             <h1>Bonjour, Paul</h1>
@@ -70,13 +103,15 @@
             </div>
         </div>
 
-        <p>Bonjour !</p>
+        <p></p>
+        <img src="../Ressources/Click on Explorer/Notifications.png" alt="Notifications">
 
         <div class="Icons">
-            <!-- Communauté -->
-            <a href="#" class="item">
-                <img src="../Ressources/Click on Explorer/Communauté.png" alt="Communauté">
-                <span class="Label c_bleu0">Explorer</span>
+
+            <!-- Community -->
+            <a href="#">
+                <img src="../Ressources/Click on Explorer/Communauté.png" alt="Communauté" id="Communauté">
+                <span class="Label c_bleu0">Communauté</span>
             </a>
 
             <!-- Planning -->
@@ -87,67 +122,57 @@
 
             <!-- Infrastructure -->
             <a href="#">
-                <img src="../Ressources/Click on Explorer/Infrastructures.png" alt="Infrastructures">
-                <span class="Label c_bleu0">Planning</span>
+                <img src="../Ressources/Click on Explorer/Infrastructures.png" alt="Infrastructures" id="Infrastructures">
+                <span class="Label c_bleu0">Infrastructures</span>
             </a>
 
             <!-- Formations -->
             <a href="#">
                 <img src="../Ressources/Click on Explorer/Formations.png" alt="Formations">
-                <span class="Label c_bleu0">Planning</span>
+                <span class="Label c_bleu0">Formations</span>
             </a>
 
             <!-- Progression -->
             <a href="#">
                 <img src="../Ressources/Click on Explorer/Progression.png" alt="Progression">
-                <span class="Label c_bleu0">Planning</span>
+                <span class="Label c_bleu0">Progression</span>
             </a>
 
-            <!-- Témoignages -->
+            <!-- Testimonies -->
             <a href="#">
-                <img src="../Ressources/Click on Explorer/Témoignages.png" alt="Témoignages">
-                <span class="Label c_bleu0">Planning</span>
-            </a>
-
-            <!-- Apprendre -->
-            <a href="#">
-                <img src="../Ressources/Click on Explorer/Apprendre.png" alt="Apprendre">
-                <span class="Label c_bleu0">Planning</span>
+                <img src="../Ressources/Click on Explorer/Témoignages.png" alt="Témoignages" id="Témoignages">
+                <span class="Label c_bleu0">Témoignages</span>
             </a>
 
             <!-- FAQ -->
             <a href="#">
                 <img src="../Ressources/Click on Explorer/FAQ.png" alt="FAQ">
-                <span class="Label c_bleu0">Planning</span>
+                <span class="Label c_bleu0">FAQ</span>
             </a>
 
-            <!-- Projet -->
-            <a href="#">
-                <img src="../Ressources/Click on Explorer/Projet.png" alt="Projet">
-                <span class="Label">Planning</span>
-            </a>
-
-            <!-- Parrainage -->
+            <!-- Alumni network -->
             <a href="#">
                 <img src="../Ressources/Click on Explorer/AlumniResaux_des_anciens.png" alt="Parrainage">
-                <span class="Label">Planning</span>
+                <span class="Label">Réseau des <br>anciens</span>
             </a>
 
         </div>
 
-        <!-- Barre de navigation -->
+        <p id="bas"></p>
+
+        <!-- Navigation bar -->
         <div class ="nav">
-            <!-- L'icône pour l'accueil (maison) -->
+            <!-- Icon for the home page (house) -->
             <a href="#" class="nav__link nav__link--activeBlue">
                 <i class="material-icons nav__icon">home</i>
                 <span class="nav__text">Home</span>
             </a>
-            <!-- L'icône pour Explorer -->
+            <!-- Icon for the explorer page -->
             <a href="#" class="nav__link">
                 <i class="material-icons nav__icon">explore</i>
                 <span class="nav__text">Explorer</span>
             </a>
-            <!-- L'icône pour le profil -->
+            <!-- Icon for the profile -->
             <a href="#" class="nav__link">
                 <i class="material-icons nav__icon">account_circle</i>
                 <span class="nav__text">Profil</span>

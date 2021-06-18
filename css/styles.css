@@ -151,16 +151,3 @@ body {
 .c_green4 {
     color: #81C5A7;
 }
-
-
-/* _________ Les styles d'ombres _________ */
-.ombre1{
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.03) ;
-}
-.ombre2{
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1) ;
-}
-.ombre3{
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.15) ;
-}
-
