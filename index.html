@@ -8,8 +8,14 @@
         <link rel="shortcut icon" href="/assets/favicon.ico">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="./styles.css">
+
+        <style>
+
+        </style>
     </head>
     <body>
+        <p id="top"></p>
+
         <nav> <!-- NavBar - Bottom Icon -->
             <div class ="nav">
                 <a href="#" class="nav__link nav__link--activeBlue">
@@ -25,40 +31,56 @@
                       <span class="nav__text">Profil</span>
                   </a>
             </div>
-            <header class ="header"> <!-- Header -->
-                <h1>Bonjour, Paul</h1>
-                <div class ="search_box">
-                    <table class="elementsContainer">
-                        <tr>
-                            <td>
-                                <input type="text" placeholder="Cherche ce dont tu as besoin..."
-                                class="search">
-                            </td>
-                            <td>
-                                <a href="#">
-                                    <i class="material-icons">search</i>
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </header>
         </nav>
 
-        <div class="AppointmentContainer"> <!-- Container -->
+        <header class ="NavigationHeader"> <!-- Header -->
+            <h1>Bonjour, Paul</h1>
+            <div id="container">
+                <form action="">
+                    <div class="input">
+                        <input type="text" placeholder="Rechercher" />
+                        <i class="fas fa-serach"></i>
+                    </div>
+                </form>
+            </div>
+        </header>
+
+        <div class="AppointmentContainer"> <!-- Appointment Container -->
             <div class= "AppointmentContainer_top">
-                <h2 class="name">Prochain Rendez-vous</h2>
+                <h4 class="name">Prochain Rendez-vous</h4>
                 <p>Ton rendez-vous avec M.Jean approche !</p>
             </div>
             <div class= "AppointmentContainer_bottom">
-                <div>
+                <div class="Calendar">
                     <img src="Ressources/Homepage/Calendar.png" alt="Icone Planning">
                     <p>13 Mai</pl>
                 </div>
-                <div>
+                <div class="Time" >
                     <img src="Ressources/Homepage/Time Circle.png" alt="Icone Horloge">
                     <p>9h 05min</p>
                 </div>
             </div>
+        </div>
+
+        <div class=TitleProgressionContainer> <!-- Stats Progression Container -->
+            <div class=TitleProgression >
+                <h2 class="MyProgression">Ma Progression</h2>
+                <img class="IconHelp"src="Ressources/Homepage/bx_bx-help-circle.png" alt="Icon Help">
+            </div>
+            <button type="button">TOUT VOIR</button>
+        </div>
+        <div class= "ProgressionStatBlock"></div>
+
+        <h3>Mes missions hebdomadaires</h3><!-- Stat Progression Container -->
+        <!-- To Do : Icon help between title ???? -->
+        <div class="CvContainer">
+            <h4 class= >Termine ton premier CV</h4>
+            <p>Encore un peu d’effort, tu y est <br>
+            presque ! Tu as bientôt finis ton CV !</p>
+        </div>
+
+
     </body>
+
+
 </html>
