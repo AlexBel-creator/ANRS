@@ -46,3 +46,6 @@ body {
 .nav__icon {
     font-size: 29px;
 }
+.nav__text{
+    margin-top:6px;
+}
