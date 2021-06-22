@@ -21,9 +21,11 @@
     <!-- Le header -->
     <link rel="stylesheet" href="../css/header.css">
 
+    
+
     <style>
         
-        /* Header */
+        /* _________________ Header _________________ */
         #top_page {
             margin: 30px 30px;
         }
@@ -31,7 +33,6 @@
         h3.c_bleu0 {
             margin-bottom: 30px;
         }
-
         #select {
             height: 64px;
             width: 43px;
@@ -43,7 +44,6 @@
             background-color: #FDD35D;
             border-radius: 12px;
         }
-
         .day_name {
             font-family: sans-serif;
             font-weight: 600;
@@ -62,7 +62,6 @@
         .day_number.after, .day_name.after {
             color: #BDBDBD;
         }
-
         #date {
             position: relative;
             display: grid;
@@ -76,7 +75,8 @@
             text-align: center;
         }
 
-        /* Main */
+        /* _________________ Main _________________ */
+        /* Layout */
         main {
             background-color: white;
             border-radius: 12px;
@@ -91,14 +91,15 @@
         main > div#schedule_bloc {
             padding-top: 1px;
         }
-
         main > div#schedule_bloc > span {
             display: grid;
             grid-template-columns: 1fr 9fr;
             justify-content: space-around;
             gap: 20px;
-            margin: 20px;
+            margin: 20px 0px 20px 20px;
         }
+
+        /* Hours */
         main > div#schedule_bloc > span > p {
             color: #cccccc;
             font-size: 14px;
@@ -107,6 +108,8 @@
             line-height: 128.9%;
             width: 10px;
         }
+
+        /* Dotted lines */
         main > div#schedule_bloc > span > hr {
             border: none;
             border-top: 1px dashed #43A047;
@@ -115,24 +118,61 @@
             opacity: 24%;
         }
 
-        
+        /* Content displayed in the schedule */
+        #day_events {
+            position: absolute;
+            left: calc(10% + 35px);
+            width: calc(90% - 56px);
+            height: inherit;
+            /* max-width: calc(90% - 56px); */
+        }
+        /* Bloc which contains the information about an event */
+        div#day_events > span {
+            background-color: white ;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+            width: 100%;
+            border-radius: 2px; 
+            position: absolute;
+            z-index: 1;
+            /* top: 27px; */
+        }
+        /* Line at the left */
+        div#day_events > span > div {
+            width: 4px;
+            border-radius: 2px;
+            position: absolute;
+        }
+        /* What's written in the bloc */
+        div#day_events > span > p {
+            position: absolute;
+            left: 9px;
+            top: 7px;
+            overflow-y: scroll;
+            width: calc(inherit); 
+            height: 82px;
+            line-height: 15px;
+            font-size: 12px;
+        }
+        div#day_events > span > p > strong {
+            font-weight: 600;
+        }
+        div#day_events > span > p > br {
+            height: 30px;
+        }
 
-
-        
-        /* Other */
+        /* _________________ Other _________________ */
         body>p#top {
             height: 156px;
             margin: 30px;
         }
 
         p#bottom {
-            height: 85px;
+            height: 30px;
         }
 
         body {
             background-color: #F5F5F5;
         }
-    
 
     </style>
 
@@ -203,6 +243,9 @@
 
     <main>
         <div id="schedule_bloc" class="shadow3">
+            <div id="day_events">
+            </div>
+    
             <span class="day_hour">
                 <p>9H</p>
                 <hr>
@@ -244,6 +287,7 @@
                 <hr>
             </span>
         </div>
+        
     </main>
     
 

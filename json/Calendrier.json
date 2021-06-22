@@ -1,0 +1,43 @@
+[
+    {
+        "ID": "591029456",
+        "Type": "Formation",
+        "Nom" : "Savoir rédiger un CV et une lettre de motivation",
+        "Date" : "25 6 2021",
+        "Debut" : "9 30",
+        "Fin" : "12 30",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/azevfdsqer32ffzaebtrfbqefr",
+        "Formateur" : "M.Rénaut",
+        "Salle" : "A12"
+    }, {
+        "ID": "5910294567",
+        "Type": "Rendez-vous",
+        "Nom" : "Orientation",
+        "Date" : "25 6 2021",
+        "Debut" : "15 00",
+        "Fin" : "16 00",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Mercadier",
+        "Salle" : "B01"
+    }, {
+        "ID": "591029458",
+        "Type": "Formation",
+        "Nom" : "Remise à niveau en français",
+        "Date" : "25 6 2021",
+        "Debut" : "16 30",
+        "Fin" : "18 00",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Brunault",
+        "Salle" : "C04"
+    }, {
+        "ID": "591029451",
+        "Type": "Formation",
+        "Nom" : "Remise à niveau en français",
+        "Date" : "24 6 2021",
+        "Debut" : "13 00",
+        "Fin" : "17 00",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Brunault",
+        "Salle" : "C04"
+    }
+]
