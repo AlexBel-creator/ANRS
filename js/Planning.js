@@ -12,7 +12,6 @@ Date.prototype.addDays = function(days) {
     return date;
 }
 
-
 function return_day( date ) {
     // This function allows to return the day under this format : "jj mm yyyy"
 
@@ -37,15 +36,12 @@ function hour_converter( hour ) {
 function hourToHeight(begin, end) {
     // Converts a decimal hour into the position Y and height taken on the page.
 
-    // console.log("fin : " + hour_converter(end) + " | Debut : " + hour_converter(begin));
     const time = hour_converter(end) - hour_converter(begin);
     const height = time * 334 / 9;
     const posY = 28 + (hour_converter(begin) - 9) * 334 / 9 ;
 
     return [Math.floor(posY) - 1, Math.floor(height) + 1]
 }
-
-// ________________ Day scroller ________________
 
 function load(date_year){
     // This function is used to setup the day scroller. This scroller will be used for many different purposes, such as to retrieve the day we are currently in while we scroll. 
@@ -66,10 +62,49 @@ function load(date_year){
         } 
     }
 }
+
+function search_date ( date_searched ) {
+    // Searches the date in the array date_year.
+    for ( i = 0 ; i < date_year.length - 1 ; i++ ) {  
+        if ( date_searched == date_year[i].getDate() ) {
+            nav = return_day(date_year[i]);
+            API_request(nav);
+            break;
+        }
+    }
+}
+
+// function hour_string( hour_start, hour_end){
+//     // Converts the hour + date into a string which can be read on the schedule. It doesn't seem to work, so this function will be taken out.
+
+//     const hour = [hour_start, hour_end]
+//     let b_hour = ''
+
+//     for ( i = 0 ; i < hour.length ; i++ ){
+//         let a_hour = hour[i].split(' ');
+//         a_hour[0] = a_hour[0].concat('', 'h');
+//         a_hour[1] = a_hour[1].concat('', 'min');
+
+//         if ( i === 1) {
+//             b_hour = b_hour.concat('', ' - ')
+//         }
+
+//         b_hour = b_hour.concat('', a_hour[0].concat(' ', a_hour[1]));
+//     }
+
+//     return b_hour
+// }
+
+
+
+// ________________ Day scroller ________________
+
 load(date_year);
 
 // Allows to directely start at the middle of the slider once we load the page. 
 document.querySelector('#date').scrollLeft = (document.querySelector('#date').scrollWidth) / 2 - document.querySelector('#date').offsetWidth / 2;
+
+search_date(date.getDate());
 
 // Smooth scrolling with lock isn't implemented.
 document.querySelector('#date').addEventListener('scroll', function(){
@@ -79,14 +114,7 @@ document.querySelector('#date').addEventListener('scroll', function(){
         // const day_name = document.elementFromPoint(document.getElementById('select').getBoundingClientRect().left + 10, document.getElementById('select').getBoundingClientRect().top + 20);
         const day_number = document.elementFromPoint(document.getElementById('select').getBoundingClientRect().left + 10, document.getElementById('select').getBoundingClientRect().top + 40);
 
-        for ( i = 0 ; i < date_year.length - 1 ; i++ ) {
-            
-            if ( day_number.innerHTML == date_year[i].getDate() ) {
-                nav = return_day(date_year[i]);
-                API_request(nav);
-                break;
-            }
-        }
+        search_date(day_number.innerHTML);
     }
 })
 
@@ -125,22 +153,30 @@ function API_request(time){
             pos_height = hourToHeight( e[i].Debut, e[i].Fin );
 
             if ( e[i].Type == "Formation" ){
+                // Green
                 color = "4BA37A";
             } else if ( e[i].Type == "Rendez-vous" ){
+                // Orange
                 color = "FA754C";
             } else if ( e[i].Type == "Atelier" ){
-                color = "FDD35D";
-            } else {
+                // Yellow
                 color = "27527C";
+            } else {
+                // Blue
+                color = "FDD35D";
             }
 
-            document.getElementById('day_events').innerHTML +=
-            '<span style="height:' + pos_height[1] + 'px; top:' + pos_height[0] +'px; "> <div style="height:' + 
-            pos_height[1] + 'px; background-color: #' + color + ';"></div> <p style="color: #' + color + '; height:' + (pos_height[1] - 10) + 'px;"> <strong>' + e[i].Type + ' : </strong> ' + e[i].Nom + ' <br> <Strong>Responsable : </strong>' + e[i].Formateur + ' <br><strong>Salle : </strong> ' + e[i].Salle + '<br><strong>Lien : </strong> <a href="'+ e[i].Lien + ' target="_blank" style="color: #' + color + ';"> Cliquez-ici</a> </p> </span>' ;
+            if ( e[i].Lien === "" ){
+                document.getElementById('day_events').innerHTML +=
+                '<span style="height:' + pos_height[1] + 'px; top:' + pos_height[0] +'px; "> <div style="height:' + pos_height[1] + 'px; background-color: #' + color + ';"></div> <p style="color: #' + color + '; height:' + (pos_height[1] - 10) + 'px;"> <strong>' + e[i].Type + ' : </strong> ' + e[i].Nom + ' <br><strong>Date : </strong> ' + e[i].Date_Tot + '<br> <Strong>Responsable : </strong>' + e[i].Formateur + ' <br><strong>Salle : </strong> ' + e[i].Salle + '</p> </span>' ;
+            } else {
+                document.getElementById('day_events').innerHTML +=
+                '<span style="height:' + pos_height[1] + 'px; top:' + pos_height[0] +'px; "> <div style="height:' + pos_height[1] + 'px; background-color: #' + color + ';"></div> <p style="color: #' + color + '; height:' + (pos_height[1] - 10) + 'px;"> <strong>' + e[i].Type + ' : </strong> ' + e[i].Nom + ' <br><strong>Date : </strong> ' + e[i].Date_Tot + '<br> <Strong>Responsable : </strong>' + e[i].Formateur + ' <br><strong>Salle : </strong> ' + e[i].Salle + '<br><strong>Lien : </strong> <a href="'+ e[i].Lien + ' target="_blank" style="color: #' + color + ';"> Cliquez-ici</a> </p> </span>' ;
+            }
+
         }
 
     }).catch(function(error){
         console.log(error);
     })
-
 }
