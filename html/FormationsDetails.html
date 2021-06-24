@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formations Details</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <!-- CSS - reset -->
+        <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+        <!-- Les styles -->
+        <link rel="stylesheet" href="../css/styles.css">
+        <!-- La navbar -->
+        <link rel="stylesheet" href="../css/navbar.css">
+        <!-- Le header -->
+        <link rel="stylesheet" href="../css/header.css">
+        <!-- Les icones -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <style>
+             /* ________Medias queries_________*/
+            /* All */
+            @media all and (min-width: 677px){
+                main,footer{ 
+                    position:relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 450px;
+                }
+                #FormationContainer,#FormationContainer_bottom {
+                    position:relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+             /* _______Start Part_______ */
+            body{
+                background-color: #F5F5F5;
+            }
+            /* _______Header_______*/
+            /* Detils Stages Title */
+            /* Image  */
+
+
+            #CarpenterFormation{
+                width: 100%;
+                height: 400px;
+                border-radius: 0px 0px 12px 12px;
+                border-radius: 12px;
+                margin-right: 20px;
+                transform: translateY(-80px);
+                position: fixed;
+                z-index: 1;
+                object-fit: cover;
+            }
+            /* Title */
+            #FormationContainer{
+                margin-left: 30px;
+                position: fixed;
+                /* z-index: 10; */
+                max-width: 677px;
+                z-index: 1;
+            }
+            #FormationContainer > h4{
+                font-family:"Montserrat";
+                font-size: 24px;
+                font-weight:bold;
+                color:white;
+                line-height: 36px;
+                margin-bottom: 15px;
+                margin-top: 30px;
+
+            }
+            #Sub{
+                display: flex;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+            }
+            #Sub > h3{
+                font-family:"Montserrat";
+                font-weight:bold;
+                color:white;
+                z-index: 2;
+                padding-left: 46px;
+                padding-right: 46px;
+            }
+            #Arrow{
+                height: 18px;
+                width: 11px;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+            #Arrow:hover{
+                height: 18px;
+                width: 11px;
+                transform: scale(1.5, 1.5);
+                transition: 0.5s;
+            }
+            #Star{
+                cursor: pointer;
+                transform: translateY(-15px);
+                transition: 0.5s;
+            }
+            #Star:hover{
+                transition: 0.5s;
+                transform: scale(1.45, 1.5) translateY(-10px);
+            }
+            #Sub{
+                margin-right: 25px;
+                margin-top: 70px;
+                display: flex;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+            }
+            /* Mid - Days & Hours */
+            #FormationContainer_mid{
+                padding-left: 30px;
+            }
+            .TextYellowIcon {
+                font-size:14px;
+                font-family: "Montserrat";
+                font-weight:500;
+                color: white;
+                transform: translateY(4px) translateX(10px);
+            }
+            .Planning{
+                display:flex;
+                flex-direction: row;
+                flex-grow:2;
+                max-width: 80px;
+            }
+            .Time{
+                display:flex;
+                flex-grow:2;
+                flex-direction: row;
+                /* max-width: 105px; */
+                transform: translateX(117px) translateY(-20px);
+            }
+            /* Bottom - Instructor Part */
+            #name{
+                color:white;
+                font-size: 13px;
+                font-family: "Montserrat";
+                font-weight: 500;
+            }
+            #job{
+                color: #FDD35D;
+                font-size: 9px;
+                font-family: "Montserrat";
+                font-weight: 500;
+                margin-top: 3px;
+            }
+            #FormationContainer_bottom{
+                margin-left: 38px;
+                margin-top:40px; 
+                display: grid;
+                grid-template-columns: 47px 136px 121px;
+                position:fixed;
+                transform: translateY(225px) translateX(-12px);
+                z-index: 1;
+            }
+            #InstructorText{
+                transform: translateY(7px);
+            }
+            /* _______Horizontaly Scroll SecondMenu Bar_______ */
+            #ButtonContainer {
+                position: sticky;
+                white-space: nowrap;
+                margin-left: 16px;
+                margin-top: 60px;
+            }
+            #Button1, #Button2, #Button3 {
+                height: 40px;
+                border:none;
+                background-color:#F5F5F5;
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 12px;
+                display: inline-block;
+                cursor:pointer;
+                border-radius: 12px;
+                margin-right: 2px;
+                transition: fixed;
+            }
+            #Button1{
+                width: 112px;
+            }
+            #Button2{
+                width: 112px;
+            }
+            #Button3{
+                width: 112px;
+            }
+            /* Animation Button  */
+            #Button1:hover{
+                color:#27527C;
+                background-color: #FDD35D;
+                border-radius: 12px;
+                height: 40px;
+            }
+            #Button2:hover{
+                color:#27527C;
+                background-color: #FDD35D;
+                border-radius: 12px;
+                height: 40px;
+            }
+            #Button3:hover{
+                color:#27527C;
+                background-color: #FDD35D;
+                border-radius: 12px;
+                height: 40px;
+            }
+            /* _______ Bottom Text_______ */
+            /* Separate Line */
+            #SeparateLine{
+                margin-left: 16px;
+                margin-right:16px;
+                margin-top: 9px;
+                height:1px;
+                background-color: #E2E3E4;
+                max-width: 420px;
+            }
+
+
+            /*_____ Setup Hyperlink None Decoration - On HTML Default_____ */
+            #DETAILS{
+                border:none;
+                text-decoration: none;
+                font-family: "Poppins";
+                color: #838795;
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 12px;
+                transition: 0.5s
+            }
+            #DETAILS:hover{
+                border:none;
+                text-decoration: none;
+                color:#27527C;
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 12px;
+            }
+            #PLANNING{
+                border:none;
+                text-decoration: none;
+                font-family: "Poppins";
+                color: #838795;
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 12px;
+            }
+            #PLANNING:hover{
+                border:none;
+                text-decoration: none;
+                color:#27527C;
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 12px;
+            }
+            #METIER{
+                border:none;
+                text-decoration: none;
+                font-family: "Poppins";
+                color: #838795;
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 12px;
+            }
+            #METIER:hover{
+                border:none;
+                text-decoration: none;
+                color:#27527C;
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 12px;
+            }
+
+            main{
+                padding-top: 275px
+            }
+            #PROPOS{
+                margin: 30px;
+                color: #27527C;
+                max-width: 677px;
+            }
+            #TEXT{
+                margin: 30px;
+                color: #5A6072;
+                max-width: 677px;
+            }
+
+
+
+
+            /* _______Final Parts_______ */
+            #bottom{
+                height:30px;
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+    <p id="top"></p>
+
+    <!-- Header-->
+    <nav>
+        <p id="bas"></p>
+
+        <!-- Barre de navigation -->
+        <div class ="nav">
+            <!-- L'icône pour l'accueil (maison) -->
+            <a href="#" class="nav__link nav__link--activeBlue">
+                <i class="material-icons nav__icon">home</i>
+                <span class="nav__text">Accueil</span>
+            </a>
+            <!-- L'icône pour Explorer -->
+            <a href="#" class="nav__link">
+                <i class="material-icons nav__icon">explore</i>
+                <span class="nav__text">Explorer</span>
+            </a>
+            <!-- L'icône pour le profil -->
+            <a href="#" class="nav__link">
+                <i class="material-icons nav__icon">account_circle</i>
+                <span class="nav__text">Profil</span>
+            </a>
+        </div>
+    </nav>
+
+    <header>
+        <img id="CarpenterFormation"src="../Ressources/Formation/Background - image.png" alt=""> 
+        <div id="FormationContainer">
+            <div id="Sub">
+                <a id="ARROW" href="../html/FormationsAteliers.html"><img id="Arrow" src="../Ressources/Formation/Arrow - Left 2.png" alt=""></a>
+                <h3>Détails de l'atelier</h3>
+                <img id="Star" src="../Ressources/Formation/Icon_star.png" alt="">
+            </div>
+            <h4>Formation au métier de menuisier</h4>
+            <div id= "FormationContainer_mid"></div>
+                <span class="Planning">
+                    <img class="YellowIcon" src="../Ressources/Homepage/Calendar.png" alt="Icone Planning">
+                    <p class="TextYellowIcon">06 Juin</p>
+                </span>
+                <span class="Time" >
+                    <img class="YellowIcon" src="../Ressources/Homepage/Time Circle.png" alt="Icone Horloge">
+                    <p class="TextYellowIcon">10h 50min</p>
+                </span>
+            </div>
+            <div id="FormationContainer_bottom">
+                <img src="../Ressources/Formation/Profil_Formateur.png" alt="Profil Formateur">
+                <span id="InstructorText">
+                    <p id=name>David Guillot</p>
+                    <p id=job >Formateur Menuisier</p>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="ButtonContainer">
+            <button type="button" id=Button1><a id="DETAILS" href="">Détails</a></button>
+            <button type="button" id=Button2><a id="PLANNING" href="">Planning</a></button>
+            <button type="button" id=Button3><a id="METIER" href="">Le métier</a></button>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Separate Line -->
+        <div id="SeparateLine"></div>
+        <h3 id="PROPOS">À propos de l’atelier</h3>
+        <p id="TEXT">Le menuisier travaille le bois. Il fabrique, répare, 
+            installe placards, escaliers, parquets, volets, meubles, boiseries...<br>
+            <br>
+            Il choisit tout d’abord le matériau adapté au travail à réaliser. Ensuite, il trace à l’aide du trusquin, du compas, de l’équerre et de la règle, les dimensions nécessaires à la confection des pièces. Il les façonne à l’aide de machines à commande numérique et les assemble à partir d’un plan de montage et de pose.<br>
+            <br>
+            Dernière étape : assurer la finition des travaux par des revêtements divers (laques, teintures, vernis…).<br>
+            Principale préoccupation du menuisier : respecter les problèmes de structure et d’étanchéité.<br>
+            <br>
+            Si le bois reste son matériau de prédilection, le menuisier utilise de plus en plus l’aluminium, le PVC, les panneaux agglomérés ou stratifiés.
+            Il peut aussi effectuer la restauration d’ouvrages anciens. Le menuisier doit donc être à la fois un artisan habile aux mouvements rapides et sûrs, et maîtriser les notions essentielles de géométrie.<br>
+            <br>
+            Bien que le travail manuel reste important, il est de plus en plus relayé par des machines automatisées.<br>
+            Le menuisier peut être salarié d’une entreprise ou artisan indépendant. Selon les cas, il travaille dans un atelier, sur un chantier ou dans le lieu qu’il doit aménager.
+            Il se déplace souvent et exerce en collaboration avec d’autres professionnels du bâtiment (maçons, plombiers, peintres). Il manipule des charges importantes dans des positions souvent inconfortables.
+        </p>
+    </footer>
+
+    <p id="bottom"></p>
+
+    </body>
+</html>
