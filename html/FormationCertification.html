@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formation Certification numérique</title>
+
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <!-- CSS - reset -->
+        <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+        <!-- Les styles -->
+        <link rel="stylesheet" href="../css/styles.css">
+        <!-- La navbar -->
+        <link rel="stylesheet" href="../css/navbar.css">
+        <!-- Le header -->
+        <link rel="stylesheet" href="../css/header.css">
+        <!-- Les icones -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <style>
+            /* ________Medias queries_________*/
+            /* All */
+            @media all and (min-width: 677px){
+                body > div{ 
+                    position:absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 677px;
+                    padding-bottom: 110px; 
+                }
+            }
+            /* _______Start Part_______ */
+            body{
+                background-color: #F5F5F5;
+            }
+            #top{
+                height: 188px;
+            }
+
+
+            /* _______Horizontaly Scroll SecondMenu Bar_______ */
+            #ButtonContainer {
+                overflow: auto;
+                position: sticky;
+                white-space: nowrap;
+                margin-left: 20px;
+                margin-top: 17px;
+            }
+            #Button1, #Button2, #Button3 {
+                background: #FFFF;
+                color: #838795;
+                height: 40px;
+                border:none;
+                border-radius: 12px;
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 12px;
+                display: inline-block;
+                cursor:pointer;
+                margin-right: 5px;
+                transition:  1.2s;
+            }
+            #Button1{
+                width: 89px;
+            }
+            #Button2{
+                width: 183px;
+            }
+            #Button3{
+                width: 128px;
+            }
+            /* Animation Button  */
+            #Button1{
+                box-shadow: inset 0 0 0 0 #3B7ABA;
+            }
+            #Button1:hover{
+                color:#ffff;
+                background-color: #3B7ABA;
+            }
+            #Button2{
+                box-shadow: inset 0 0 0 0 #3B7ABA;
+            }
+            #Button2:hover{
+                color:#ffff;
+                background-color: #3B7ABA;
+            }
+            #Button3{
+                box-shadow: inset 0 0 0 0 #3B7ABA;
+            }
+            #Button3:hover{
+                color:#ffff;
+                background-color: #3B7ABA;
+            }
+
+
+            /*_______Numerical certification_______*/
+            /* Separate Line */
+            #SeparateLine{
+                margin-left: 20px;
+                margin-right:13px;
+                margin-top: 9px;
+                height:1px;
+                background-color: #E2E3E4;
+            }
+
+            /* _______Numerical certification_______ */
+            #CertificationContainer{
+                margin-top: 27px;
+                margin-left:20px;
+                margin-right:20px;
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-top: 15px;
+                background-color: white;
+                border-radius: 12px;
+                height: 100%;
+                max-width: 677px;
+            }
+            #SubtitleCertification{
+                padding-top: 11px;
+                padding-bottom:14px;
+            }
+            #TextCertification{
+                padding-bottom: 24px;
+                line-height: 15px;
+            }
+            ul{
+                padding-top:4px;
+                padding-bottom: 3px;
+            }
+            li{
+                line-height: 17px;
+            }
+            #ButtonCommencer {
+                background: none;
+                color: #466EFE;
+                width: 96px;
+                height: 30px;
+                border: 1px solid #466EFE;
+                font-size: 12px;
+                font-weight: 500 ;
+                font-family: "Montserrat";
+                border-radius: 12px;
+                transform: translateY(-19%);
+                cursor: pointer;
+                box-shadow: inset 0 0 0 0 #466EFE;
+                margin-bottom: 20px;
+            }
+            #ButtonCommencer:hover{ /* Animation Button */
+                box-shadow: inset 0 0 0 50px #466EFE;
+                color: white;
+            }
+            #ButtonContainer2{
+                margin-top: 20px;
+            }
+            .SubtitleContainer{/*Setup */
+                font-size: 13px;
+                color:#27527C;
+                font-weight: 500;
+                font-family: "Montserrat";
+                line-height: 16px ;
+            }
+            .TextContainer{/*Setup */
+                font-size: 12px;
+                color:#5A6072;
+                font-weight: 400;
+                font-family: "Montserrat";
+                line-height: 15px ;
+            }
+            h3{
+                color:#27527C;
+                margin-left: 20px;
+                margin-top: 28px;
+            }
+
+
+            /* _______Final Parts_______ */
+            #bottom{
+                height:100px;
+            }
+
+
+            /*_____ Setup Hyperlink None Decoration - On HTML Default_____ */
+            #Langue{
+                border:none;
+                color: #838795;
+                text-decoration:none;
+            }
+            #Langue:hover{
+                border:none;
+                color: white;
+                text-decoration:none;
+            }
+            #Certification{
+                border:none;
+                color: #838795;
+                text-decoration:none;
+            }
+            #Certification:hover{
+                border:none;
+                color: white;
+                text-decoration:none;
+            }
+            #PIX{
+                border:none;
+                color: #466EFE;
+                text-decoration:none;
+            }
+            #PIX:hover{
+                border:none;
+                color: white;
+                text-decoration:none;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="top"></p>
+
+        <!-- Header and navigation bar -->
+        <nav>
+            <!-- Header -->
+            <div class ="header">
+                <div>
+                    <p id="DATE">DATE</p>
+                    <h1>Bonjour, Paul</h1>
+                </div>
+                <div class="boxContainer">
+                    <table a="elementsContainer">
+                        <tr>
+                            <td>
+                                <input type="text"
+                                placeholder="Cherche ce dont tu as besoin..."
+                                class="search"/>
+                            </td>
+                            <td>
+                                <a href="#"><i class="material-icons">search</i>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <p id="bas"></p>
+
+            <!-- Barre de navigation -->
+            <div class ="nav">
+                <!-- L'icône pour l'accueil (maison) -->
+                <a href="#" class="nav__link nav__link--activeBlue">
+                    <i class="material-icons nav__icon">home</i>
+                    <span class="nav__text">Accueil</span>
+                </a>
+                <!-- L'icône pour Explorer -->
+                <a href="#" class="nav__link">
+                    <i class="material-icons nav__icon">explore</i>
+                    <span class="nav__text">Explorer</span>
+                </a>
+                <!-- L'icône pour le profil -->
+                <a href="#" class="nav__link">
+                    <i class="material-icons nav__icon">account_circle</i>
+                    <span class="nav__text">Profil</span>
+                </a>
+            </div>
+
+        </nav>
+
+        <div>
+            <!-- SubMenu Horizontally Scroll-->
+            <header>
+                <div id="ButtonContainer">
+                    <button type="button" id=Button1><a id="Langue" href="../html/FormationLangues.html">Langues</a></button>
+                    <button type="button" id=Button2><a id="Certification" href="../html/FormationCertification.html">Certification numérique</a></button>
+                    <button type="button" id=Button3>Mathématique</button>
+                </div>
+            </header>
+
+            <!-- Learn a language -->
+            <main>
+                <!-- Separate Line -->
+                <div id="SeparateLine"></div>
+
+            <!-- Numerical Certification  -->
+            <div id="CertificationTitle" >
+                <h3>Certification numérique</h3>
+                <!-- Container -->
+                <div id="CertificationContainer">
+                    <img id="Pix" src="../Ressources/Formation/Pix.png" alt="Pix.fr">
+                    <p class="SubtitleContainer" id="SubtitleCertification">Cultivez vos compétences numériques</p>
+                    <p class="TextContainer" id="TextCertification">Pix est le service public en ligne pour évaluer,<br>
+                    développer et certifier ses compétences<br>
+                    numériques.</p>
+                    <p class="SubtitleContainer" id="SubtitleCertificication">5 domaines, 16 compétences, 6 niveaux</p>
+                    <ul class="TextContainer" id="TextCertification MarginText">
+                        <li>Information et données</li>
+                        <li>Communication et collaboration</li>
+                        <li>Création de contenu</li>
+                        <li>Protection et sécurité</li>
+                        <li>Environnement numérique</li>
+                    </ul>
+                    <div id="ButtonContainer2">
+                        <button type="button" id=ButtonCommencer><a id="PIX" href="https://pix.fr">COMMENCER</a></button>
+                    </div>
+                </div>
+            </div>
+            </main>
+        </div>
+
+
+        <p id="bottom"></p>
+
+    </body>
+</html>

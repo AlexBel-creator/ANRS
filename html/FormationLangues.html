@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formations Apprendre</title>
+        <title>Formation Apprendre les langues</title>
+
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
@@ -22,8 +23,21 @@
         <!-- Les icones -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-
         <style>
+
+                        /* ________Medias queries_________*/
+            /* All */
+            @media all and (min-width: 677px){
+                body > div{ 
+                    position:absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 677px;
+                    padding-bottom: 110px; 
+                }
+            }
+
+            
             /* _______Start Part_______ */
             body{
                 background-color: #F5F5F5;
@@ -53,16 +67,17 @@
                 display: inline-block;
                 cursor:pointer;
                 margin-right: 5px;
-                transition:  1.2s;
+                transition:  1.2s;         
             }
             #Button1{
-                width: 133px;
+                width: 89px;
+                outline: none;
             }
             #Button2{
                 width: 183px;
             }
             #Button3{
-                width: 127px;
+                width: 128px;
             }
             /* Animation Button  */
             #Button1{
@@ -101,7 +116,7 @@
             h3{
                 color:#27527C;
                 margin-left: 20px;
-                margin-top: 24px;
+                margin-top: 28px;
             }
             /* Block Learn Language */
             #Qioz, #Drapeau {
@@ -171,43 +186,47 @@
             #ButtonContainer2{
                 margin-top: 20px;
             }
-            /* _______Numerical certification_______ */
-            #CertificationContainer{
-                margin-top: 27px;
-                margin-left:20px;
-                margin-right:20px;
-                padding-left: 16px;
-                padding-right: 16px;
-                padding-top: 15px;
-                background-color: white;
-                border-radius: 12px;
-                height: 100%;
-                max-width: 677px;
-            }
-            #SubtitleCertification{
-                padding-top: 11px;
-                padding-bottom:14px;
-            }
-            #TextCertification{
-                padding-bottom: 24px;
-                line-height: 15px;
-            }
-            ul{
-                padding-top:4px;
-                padding-bottom: 3px;
-            }
-            li{
-                line-height: 17px;
-            }
+
 
             /* _______Final Parts_______ */
             #bottom{
-                height:130px;
+                height:100px;
+            }
+
+
+            /*_____ Setup Hyperlink None Decoration - On HTML Default_____ */
+            #Langue{
+                border:none;
+                color: #838795;
+                text-decoration:none;
+            }
+            #Langue:hover{
+                border:none;
+                color: white;
+                text-decoration:none;
+            }
+            #Certification{
+                border:none;
+                color: #838795;
+                text-decoration:none;
+            }
+            #Certification:hover{
+                border:none;
+                color: white;
+                text-decoration:none;
+            }
+            #QIOZ{
+                border:none;
+                color: #466EFE;
+                text-decoration:none;
+            }
+            #QIOZ:hover{
+                border:none;
+                color: white;
+                text-decoration:none;
             }
         </style>
-
     </head>
-
     <body>
         <p id="top"></p>
 
@@ -258,72 +277,48 @@
 
         </nav>
 
-        <!-- SubMenu Horizontally Scroll-->
-        <header>
-            <div id="ButtonContainer">
-                <button type="button" id=Button1>Ateliers métiers</button>
-                <button type="button" id=Button2>Ma professionnalisation</button>
-                <button type="button" id=Button3>Apprentissages</button>
-            </div>
-        </header>
+        <div>
+           <!-- SubMenu Horizontally Scroll-->
+            <header>
+                <div id="ButtonContainer">
+                    <button type="button" id=Button1 ><a id="Langue" href="../html/FormationLangues.html">Langues</a></button>
+                    <button type="button" id=Button2><a id="Certification" href="../html/FormationCertification.html">Certification numérique</a></button>
+                    <button type="button" id=Button3>Mathématique</button>
+                </div>
+            </header>
 
-        <!-- Learn a language -->
-        <main>
-            <!-- Separate Line -->
-            <div id="SeparateLine"></div>
+            <!-- Learn a language -->
+            <main>
+                <!-- Separate Line -->
+                <div id="SeparateLine"></div>
 
-            <!-- Title Learn Language -->
-            <div id="LearnLanguageTitle" >
-                <h3>Apprendre les langues</h3>
-                <!-- Container -->
-                <div id="LearnContainer">
-                    <img id="Qioz" src="../Ressources/Formation/Qioz.PNG" alt="QIOZ">
-                    <img id="Drapeau" src="../Ressources/Formation/Drapeaux.png" alt="QIOZ">
-                    <p class="SubtitleContainer" id="SubtitleLearn">Apprenez des langues avec des clips vidéo<br>
-                        et des jeux</p>
-                    <p class="TextContainer" id="TextLearn">
-                        Avec QIOZ, c’est facile et ludique de progresser en<br>
-                        langue étrangère grâce à la vidéo. Peu importe<br>
-                        votre niveau ou votre âge, apprenez gratuitement<br>
-                        une ou plusieurs langues comme l’anglais,<br>
-                        l’espagnol, l’allemand, le portugais, le chinois ou le<br>
-                        français.
-                    </p>
-                    <div id="ButtonContainer2">
-                        <button type="button" id=ButtonCommencer>COMMENCER</button>
-                    </div>
-                    </div>
+                <!-- Title Learn Language -->
+                <div id="LearnLanguageTitle" >
+                    <h3>Apprendre les langues</h3>
+                    <!-- Container -->
+                    <div id="LearnContainer">
+                        <img id="Qioz" src="../Ressources/Formation/Qioz.PNG" alt="QIOZ">
+                        <img id="Drapeau" src="../Ressources/Formation/Drapeaux.png" alt="QIOZ">
+                        <p class="SubtitleContainer" id="SubtitleLearn">Apprenez des langues avec des clips vidéo<br>
+                            et des jeux</p>
+                        <p class="TextContainer" id="TextLearn">
+                            Avec QIOZ, c’est facile et ludique de progresser en<br>
+                            langue étrangère grâce à la vidéo. Peu importe<br>
+                            votre niveau ou votre âge, apprenez gratuitement<br>
+                            une ou plusieurs langues comme l’anglais,<br>
+                            l’espagnol, l’allemand, le portugais, le chinois ou le<br>
+                            français.
+                        </p>
+                        <div id="ButtonContainer2">
+                            <button type="button" id=ButtonCommencer><a id="QIOZ" href="https://qioz.fr/fr">COMMENCER</a></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
 
-        <footer>
-            <!-- Numerical Certification  -->
-            <div id="CertificationTitle" >
-                <h3>Certification numérique</h3>
-                <!-- Container -->
-                <div id="CertificationContainer">
-                    <img id="Pix" src="../Ressources/Formation/Pix.png" alt="Pix.fr">
-                    <p class="SubtitleContainer" id="SubtitleCertification">Cultivez vos compétences numériques</p>
-                    <p class="TextContainer" id="TextCertification">Pix est le service public en ligne pour évaluer,<br>
-                    développer et certifier ses compétences<br>
-                    numériques.</p>
-                    <p class="SubtitleContainer" id="SubtitleCertificication">5 domaines, 16 compétences, 6 niveaux</p>
-                    <ul class="TextContainer" id="TextCertification MarginText">
-                        <li>Information et données</li>
-                        <li>Communication et collaboration</li>
-                        <li>Création de contenu</li>
-                        <li>Protection et sécurité</li>
-                        <li>Environnement numérique</li>
-                    </ul>
-                    <div id="ButtonContainer2">
-                        <button type="button" id=ButtonCommencer>COMMENCER</button>
-                    </div>
-                </div>
-            </div>
-        </footer>
 
         <p id="bottom"></p>
+
     </body>
 </html>

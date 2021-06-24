@@ -23,6 +23,18 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
         <style>
+            /* ________Medias queries_________*/
+            /* All */
+            @media all and (min-width: 677px){
+                body > span{ 
+                    position:relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 450px;
+                }
+            }
+
+
             /* _______Start Part_______ */
             body{
                 background-color: #F5F5F5;
@@ -56,10 +68,10 @@
                 width: 133px;
             }
             #Button2{
-                width: 183px;
+                width: 161px;
             }
             #Button3{
-                width: 127px;
+                width: 107px;
             }
             /* Animation Button  */
             #Button1{
@@ -92,6 +104,7 @@
                 margin-top: 9px;
                 height:1px;
                 background-color: #E2E3E4;
+                max-width: 420px;
             }
             /* Stages Title */
             #StagesTitle > h3{
@@ -134,7 +147,7 @@
             }
             #FormationContainer{
                 margin-left: 40px;
-                transform: translateY(-153%); /*???????? */
+                transform: translateY(-200px); 
                 z-index: 2;
             }
             #FormationContainer > h4{
@@ -201,10 +214,10 @@
                 margin-left: 38px;
                 display: grid;
                 grid-template-columns: 47px 136px 121px;
-                transform: translateY(-500%);
+                transform: translateY(-180px);
             }
             #InstructorText{
-                transform: translateY(10%);
+                transform: translateY(7px);
             }
             /* _______ Multiple Blocks Stage_______ */
             /* Title */
@@ -232,10 +245,42 @@
                 padding-left: 182px;
             }
 
-
             /* _______Final Parts_______ */
             #bottom{
-                height:90px;
+                height:40px;
+            }
+
+
+            /*_____ Setup Hyperlink None Decoration - On HTML Default_____ */
+            #ATELIER{
+                border:none;
+                color: #838795;
+                text-decoration:none;
+            }
+            #ATELIER:hover{
+                border:none;
+                color: white;
+                text-decoration:none;
+            }
+            #PRO{
+                border:none;
+                color: #838795;
+                text-decoration:none;
+            }
+            #PRO:hover{
+                border:none;
+                color: white;
+                text-decoration:none;
+            }
+            #ORIENTATION{
+                border:none;
+                color: #838795;
+                text-decoration:none;
+            }
+            #ORIENTATION:hover{
+                border:none;
+                color: white;
+                text-decoration:none;
             }
 
         </style>
@@ -245,6 +290,7 @@
 
     <body>
         <p id="top"></p>
+
 
         <!-- Header and navigation bar -->
         <nav>
@@ -293,112 +339,114 @@
 
         </nav>
 
-        <!-- SubMenu Horizontally Scroll-->
-        <header>
-            <div id="ButtonContainer">
-                <button type="button" id=Button1>Ateliers métiers</button>
-                <button type="button" id=Button2>Ma professionnalisation</button>
-                <button type="button" id=Button3>Apprentissages</button>
-            </div>
-        </header>
 
-        <!-- Main Bloc Stage -->
-        <main>
-            <!-- Separate Line -->
-            <div id="SeparateLine"></div>
-
-            <div id="StagesTitle" >
-                <h3>Prochaines Formations</h3>
-                <div id="ButtonContainer2">
-                    <button type="button" id=ButtonToutVoir>TOUT VOIR</button>
+        <span> 
+            <!-- SubMenu Horizontally Scroll-->
+            <header>
+                <div id="ButtonContainer">
+                    <button type="button" id=Button1><a id="ATELIER" href="../html/FormationsAteliers.html">Ateliers métiers</a></button>
+                    <button type="button" id=Button2><a id="PRO" href="../html/FormationsProfessionnel.html">Professionnalisation</a></button>
+                    <button type="button" id=Button3><a id="ORIENTATION" href="../html/Orientation.html">Orientation</a></button>
                 </div>
-            </div>
+            </header>
 
-            <!-- Bloc Stage -->
-            <img id="CarpenterFormation"src="../Ressources/Formation/Formation_Menuiserie_Marqueterie.png" alt="">
-            <div id="FormationContainer">
-                <h4>Formation au métier<br>de menuisier</h4>
-                <div id= "FormationContainer_mid"></div>
-                    <span class="Planning">
-                        <img class="YellowIcon" src="../Ressources/Homepage/Calendar.png" alt="Icone Planning">
-                        <p class="TextYellowIcon">06 Juin</p>
-                    </span>
-                    <span class="Time" >
-                        <img class="YellowIcon" src="../Ressources/Homepage/Time Circle.png" alt="Icone Horloge">
-                        <p class="TextYellowIcon">10h 50min</p>
-                    </span>
+            <!-- Main Bloc Stage -->
+            <main>
+                <!-- Separate Line -->
+                <div id="SeparateLine"></div>
+                <div id="StagesTitle">
+                    <h3>Prochaines Formations</h3>
+                    <div id="ButtonContainer2">
+                        <button type="button" id=ButtonToutVoir>TOUT VOIR</button>
+                    </div>
                 </div>
-                <div id="FormationContainer_bottom">
-                    <img src="../Ressources/Formation/Profil_Formateur.png" alt="Profil Formateur">
-                    <span id="InstructorText">
-                        <p id=name>David Guillot</p>
-                        <p id=job >Formateur Menuisier</p>
-                    </span>
-                    <button type =button class=ButtonInfos>Plus d'Infos</button>
-                </div>
-            </div>
-        </main>
-
-        <!-- Multiple Bloc Stage -->
-        <footer>
-            <div id = MultipleBloc>
-                <h3>Formations par métiers</h3>
-                <img class="ContainerStage" src="../Ressources/Formation/ResponsableSurface.png" alt="Stage Responsable de Surface">
-                <div id= BlocResponsable>
-                    <div class= "FormationContainer_mid">
-                        <h3>Responsable de surface</h3>
+                <!-- Bloc Stage -->
+                <img id="CarpenterFormation"src="../Ressources/Formation/Formation_Menuiserie_Marqueterie.png" alt=""> 
+                <div id="FormationContainer">
+                    <h4>Formation au métier<br>de menuisier</h4>
+                    <div id= "FormationContainer_mid"></div>
                         <span class="Planning">
                             <img class="YellowIcon" src="../Ressources/Homepage/Calendar.png" alt="Icone Planning">
-                            <p class="TextYellowIcon">19 Juin</p>
+                            <p class="TextYellowIcon">06 Juin</p>
                         </span>
                         <span class="Time" >
                             <img class="YellowIcon" src="../Ressources/Homepage/Time Circle.png" alt="Icone Horloge">
-                            <p class="TextYellowIcon">15h 30min</p>
-                        </span>
-                        <span class=WrapperButtonInfos>
-                            <button type =button class=ButtonInfos >Plus d'Infos</button>
+                            <p class="TextYellowIcon">10h 50min</p>
                         </span>
                     </div>
-                </div>
-
-                <img class="ContainerStage" src="../Ressources/Formation/BTP.png" alt="Stage BTP / Construction">
-                <div id=BlocConstruction>
-                    <div class= "FormationContainer_mid">
-                        <h3>BTP / Construction</h3>
-                        <span class="Planning">
-                            <img class="YellowIcon" src="../Ressources/Homepage/Calendar.png" alt="Icone Planning">
-                            <p class="TextYellowIcon">23 Juin</p>
+                    <div id="FormationContainer_bottom">
+                        <img src="../Ressources/Formation/Profil_Formateur.png" alt="Profil Formateur">
+                        <span id="InstructorText">
+                            <p id=name>David Guillot</p>
+                            <p id=job >Formateur Menuisier</p>
                         </span>
-                        <span class="Time" >
-                            <img class="YellowIcon" src="../Ressources/Homepage/Time Circle.png" alt="Icone Horloge">
-                            <p class="TextYellowIcon">09h 30min</p>
-                        </span>
-                        <span class=WrapperButtonInfos>
-                            <button type =button class=ButtonInfos >Plus d'Infos</button>
-                        </span>
+                        <button type =button class=ButtonInfos>Plus d'Infos</button>
                     </div>
                 </div>
+            </main>
 
-                <img class="ContainerStage" src="../Ressources/Formation/marketing.png" alt="Marketing / Communication">
-                <div id=BlocMarketing>
-                    <div class= "FormationContainer_mid">
-                        <h3>Communication / Marketing </h3>
-                        <span class="Planning">
-                            <img class="YellowIcon" src="../Ressources/Homepage/Calendar.png" alt="Icone Planning">
-                            <p class="TextYellowIcon">29 Juin</p>
-                        </span>
-                        <span class="Time" >
-                            <img class="YellowIcon" src="../Ressources/Homepage/Time Circle.png" alt="Icone Horloge">
-                            <p class="TextYellowIcon">13h 00min</p>
-                        </span>
-                        <span class=WrapperButtonInfos>
-                            <button type =button class=ButtonInfos >Plus d'Infos</button>
-                        </span>
+            <!-- Multiple Bloc Stage -->
+            <footer>
+                <div id = MultipleBloc>
+                    <h3>Formations par métiers</h3>
+                    <img class="ContainerStage" src="../Ressources/Formation/ResponsableSurface.png" alt="Stage Responsable de Surface">
+                    <div id= BlocResponsable>
+                        <div class= "FormationContainer_mid">
+                            <h3>Responsable de surface</h3>
+                            <span class="Planning">
+                                <img class="YellowIcon" src="../Ressources/Homepage/Calendar.png" alt="Icone Planning">
+                                <p class="TextYellowIcon">19 Juin</p>
+                            </span>
+                            <span class="Time" >
+                                <img class="YellowIcon" src="../Ressources/Homepage/Time Circle.png" alt="Icone Horloge">
+                                <p class="TextYellowIcon">15h 30min</p>
+                            </span>
+                            <span class=WrapperButtonInfos>
+                                <button type =button class=ButtonInfos >Plus d'Infos</button>
+                            </span>
+                        </div>
                     </div>
-                </div>
 
-            </div>
-        </footer>
+                    <img class="ContainerStage" src="../Ressources/Formation/BTP.png" alt="Stage BTP / Construction">
+                    <div id=BlocConstruction>
+                        <div class= "FormationContainer_mid">
+                            <h3>BTP / Construction</h3>
+                            <span class="Planning">
+                                <img class="YellowIcon" src="../Ressources/Homepage/Calendar.png" alt="Icone Planning">
+                                <p class="TextYellowIcon">23 Juin</p>
+                            </span>
+                            <span class="Time" >
+                                <img class="YellowIcon" src="../Ressources/Homepage/Time Circle.png" alt="Icone Horloge">
+                                <p class="TextYellowIcon">09h 30min</p>
+                            </span>
+                            <span class=WrapperButtonInfos>
+                                <button type =button class=ButtonInfos >Plus d'Infos</button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <img class="ContainerStage" src="../Ressources/Formation/marketing.png" alt="Marketing / Communication">
+                    <div id=BlocMarketing>
+                        <div class= "FormationContainer_mid">
+                            <h3>Communication / Marketing </h3>
+                            <span class="Planning">
+                                <img class="YellowIcon" src="../Ressources/Homepage/Calendar.png" alt="Icone Planning">
+                                <p class="TextYellowIcon">29 Juin</p>
+                            </span>
+                            <span class="Time" >
+                                <img class="YellowIcon" src="../Ressources/Homepage/Time Circle.png" alt="Icone Horloge">
+                                <p class="TextYellowIcon">13h 00min</p>
+                            </span>
+                            <span class=WrapperButtonInfos>
+                                <button type =button class=ButtonInfos >Plus d'Infos</button>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+        </span>
+
 
         <p id="bottom"></p>
 
