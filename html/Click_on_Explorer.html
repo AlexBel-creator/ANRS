@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <!-- Header -->
     <link rel="stylesheet" href="../css/header.css">
+    <!-- Les icones -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <style>
         /* Icons and labels */
@@ -140,41 +142,51 @@
 
 <body>
 
+    <!-- Header and Navigation Bar -->
     <nav>
         <!-- Header -->
+
+
         <div class ="header">
-            <h1>Bonjour, Paul</h1>
-            <div class ="search_box">
-                <table class="elementsContainer">
-                    <tr>
-                        <td>
-                            <input type="text" placeholder="Cherche ce dont tu as besoin..."
-                            class="search">
-                        </td>
-                        <td>
-                            <a href="#">
-                                <i class="material-icons">search</i>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
+            <div id=all>
+                <div>
+                    <p id=DATE>SAMEDI 30 MAI</p>
+                    <h1>Bonjour, Paul</h1>
+                </div>
+                <div class="boxContainer">
+                    <table a="elementsContainer">
+                        <tr>
+                            <td>
+                                <input type="text"
+                                placeholder="Cherche ce dont tu as besoin..."
+                                class="search"/>
+                            </td>
+                            <td>
+                                <a href="#"><i class="material-icons">search</i>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
+
         </div>
 
-        <!-- Navigation bar -->
+        <p id="bas"></p>
+
+        <!-- Barre de navigation -->
         <div class ="nav">
-            <!-- Icon for the home page (house) -->
-            <a href="#" class="nav__link nav__link--activeBlue">
+            <!-- L'icône pour l'accueil (maison) -->
+            <a href="Homepage.html" class="nav__link nav__link--activeBlue">
                 <i class="material-icons nav__icon">home</i>
-                <span class="nav__text">Home</span>
+                <span class="nav__text">Accueil</span>
             </a>
-            <!-- Icon for the explorer page -->
-            <a href="#" class="nav__link">
+            <!-- L'icône pour Explorer -->
+            <a href="Click_on_Explorer.html" class="nav__link">
                 <i class="material-icons nav__icon">explore</i>
                 <span class="nav__text">Explorer</span>
             </a>
-            <!-- Icon for the profile -->
-            <a href="#" class="nav__link">
+            <!-- L'icône pour le profil -->
+            <a href="Profil.html" class="nav__link">
                 <i class="material-icons nav__icon">account_circle</i>
                 <span class="nav__text">Profil</span>
             </a>
@@ -204,7 +216,7 @@
             </a>
     
             <!-- Formations -->
-            <a href="#" class="Icon" id="Formation">
+            <a href="FormationsAteliers.html" class="Icon" id="Formation">
                 <img src="../Ressources/Click on Explorer/Formations.png" alt="Formations">
                 <p class="c_bleu0">Formations</p>
             </a>
@@ -218,7 +230,7 @@
             <!-- Testimonies -->
             <a href="#" class="Icon" id="Alumni">
                 <img src="../Ressources/Click on Explorer/Témoignages.png" alt="Témoignages">
-                <p class="c_bleu0">Alumni</p>
+                <p class="c_bleu0">Réseau des <br>anciens</p>
             </a>
     
             <!-- FAQ -->
