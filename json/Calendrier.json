@@ -1,0 +1,124 @@
+[
+    {
+        "ID": "591029452",
+        "Type": "Atelier",
+        "Nom" : "Français pour débutants - Présentiel/Distanciel",
+        "Date" : "21 6 2021",
+        "Date_Tot" : "Lun 23 Juin 10:00 - 12:30",
+        "Debut" : "10 00",
+        "Fin" : "12 30",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Brunault",
+        "Salle" : "C04"
+    },{
+        "ID": "591029452",
+        "Type": "Atelier",
+        "Nom" : "Français professionnel - Présentiel/Distanciel",
+        "Date" : "21 6 2021",
+        "Date_Tot" : "Lun 23 Juin 14:15 - 16:45",
+        "Debut" : "14 15",
+        "Fin" : "16 45",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Brunault",
+        "Salle" : "C04"
+    },{
+        "ID": "591029452",
+        "Type": "Rendez-vous",
+        "Nom" : "Le point",
+        "Date" : "22 6 2021",
+        "Date_Tot" : "Mar 23 Juin 11:00 - 12:00",
+        "Debut" : "11 00",
+        "Fin" : "12 00",
+        "Lien" : "",
+        "Formateur" : "Mme.Mercadier",
+        "Salle" : "A15"
+    },{
+        "ID": "591029451",
+        "Type": "Atelier",
+        "Nom" : "MOOC - Présentiel/Distanciel",
+        "Date" : "22 6 2021",
+        "Date_Tot" : "Mar 22 Juin 14:15 - 16:45",
+        "Debut" : "14 15",
+        "Fin" : "16 45",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "M.Alabar",
+        "Salle" : "C04"
+    },{
+        "ID": "591029452",
+        "Type": "Atelier",
+        "Nom" : "COM A L'EDI - Présentiel/Distanciel",
+        "Date" : "23 6 2021",
+        "Date_Tot" : "Mer 23 Juin 10:00 - 12:30",
+        "Debut" : "10 00",
+        "Fin" : "12 30",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Brunault",
+        "Salle" : "C04"
+    },{
+        "ID": "591029452",
+        "Type": "Atelier",
+        "Nom" : "COM A L'EDI - Présentiel/Distanciel",
+        "Date" : "23 6 2021",
+        "Date_Tot" : "Mer 23 Juin 14:15 - 16:45",
+        "Debut" : "14 15",
+        "Fin" : "16 45",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Brunault",
+        "Salle" : "C04"
+    },{
+        "ID": "591029452",
+        "Type": "Atelier",
+        "Nom" : "Atelier Gestion de l'Insertion (AGI) - Présentiel/Distanciel",
+        "Date" : "24 6 2021",
+        "Date_Tot" : "Jeu 23 Juin 10:00 - 12:30",
+        "Debut" : "10 00",
+        "Fin" : "12 30",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Brunault",
+        "Salle" : "C04"
+    },{
+        "ID": "591029452",
+        "Type": "Atelier",
+        "Nom" : "Société et territoire dans et hors les murs - Présentiel/Distanciel",
+        "Date" : "24 6 2021",
+        "Date_Tot" : "Jeu 24 Juin 14:15 - 16:45",
+        "Debut" : "14 15",
+        "Fin" : "16 45",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Brunault",
+        "Salle" : "C04"
+    }, {
+        "ID": "591029452",
+        "Type": "Atelier",
+        "Nom" : "Capacités d'Autonomie Professionnelle (CAP) - Présentiel/Distanciel",
+        "Date" : "25 6 2021",
+        "Date_Tot" : "Ven 23 Juin 10:00 - 12:30",
+        "Debut" : "10 00",
+        "Fin" : "12 30",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Brunault",
+        "Salle" : "C04"
+    },{
+        "ID": "591029452",
+        "Type": "Atelier",
+        "Nom" : "Compétences numériques - Présentiel/Distanciel",
+        "Date" : "25 6 2021",
+        "Date_Tot" : "Ven 24 Juin 14:15 - 16:45",
+        "Debut" : "14 15",
+        "Fin" : "16 45",
+        "Lien" : "https://eu.bbcollab.com/collab/ui/session/join/avfojqbzeogpgohufiorainvro",
+        "Formateur" : "Mme.Brunault",
+        "Salle" : "C04"
+    } ,{
+        "ID": "591029452",
+        "Type": "Rendez-vous",
+        "Nom" : "Orientation",
+        "Date" : "25 6 2021",
+        "Date_Tot" : "Ven 25 Juin 17:00 - 18:00",
+        "Debut" : "17 00",
+        "Fin" : "18 00",
+        "Lien" : "",
+        "Formateur" : "Mme.Mercadier",
+        "Salle" : "A15"
+    }
+]

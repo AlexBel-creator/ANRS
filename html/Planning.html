@@ -14,16 +14,20 @@
     <!-- CSS -->
     <!-- CSS - reset -->
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
-    <!-- Les styles -->
+    <!-- Styles -->
     <link rel="stylesheet" href="../css/styles.css">
-    <!-- La navbar -->
+    <!-- Navbar -->
     <link rel="stylesheet" href="../css/navbar.css">
-    <!-- Le header -->
+    <!-- Header -->
     <link rel="stylesheet" href="../css/header.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+    
     <style>
         
-        /* Header */
+
+        /* _________________ Header _________________ */
         #top_page {
             margin: 30px 30px;
         }
@@ -31,7 +35,6 @@
         h3.c_bleu0 {
             margin-bottom: 30px;
         }
-
         #select {
             height: 64px;
             width: 43px;
@@ -43,16 +46,15 @@
             background-color: #FDD35D;
             border-radius: 12px;
         }
-
         .day_name {
             font-family: sans-serif;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 14px;
             line-height: 138.7%;
         }
         .day_number {
             font-family: sans-serif;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 18px;
             line-height: 138.7%;
         }
@@ -62,7 +64,6 @@
         .day_number.after, .day_name.after {
             color: #BDBDBD;
         }
-
         #date {
             position: relative;
             display: grid;
@@ -76,7 +77,9 @@
             text-align: center;
         }
 
-        /* Main */
+
+        /* _________________ Main _________________ */
+        /* Layout */
         main {
             background-color: white;
             border-radius: 12px;
@@ -87,18 +90,20 @@
             position: relative;
             left: 50%;
             transform: translateX(calc(-50% - 30px));
+            margin-bottom: 30px;
         }
         main > div#schedule_bloc {
             padding-top: 1px;
         }
-
         main > div#schedule_bloc > span {
             display: grid;
             grid-template-columns: 1fr 9fr;
             justify-content: space-around;
             gap: 20px;
-            margin: 20px;
+            margin: 20px 0px 20px 20px;
         }
+
+        /* Hours */
         main > div#schedule_bloc > span > p {
             color: #cccccc;
             font-size: 14px;
@@ -107,6 +112,8 @@
             line-height: 128.9%;
             width: 10px;
         }
+
+        /* Dotted lines */
         main > div#schedule_bloc > span > hr {
             border: none;
             border-top: 1px dashed #43A047;
@@ -115,24 +122,120 @@
             opacity: 24%;
         }
 
-        
-
-
-        
-        /* Other */
-        body>p#top {
-            height: 156px;
-            margin: 30px;
+        /* Content displayed in the schedule */
+        #day_events {
+            position: absolute;
+            left: calc(10% + 35px);
+            width: calc(90% - 56px);
+            height: inherit;
+            max-width: calc(90% - 56px);
         }
 
-        p#bottom {
-            height: 85px;
+        /* Bloc which contains the information about an event */
+        div#day_events > span {
+            background-color: white ;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+            width: 100%;
+            border-radius: 2px; 
+            position: absolute;
+            z-index: 1;
+        }
+        /* Line at the left */
+        div#day_events > span > div {
+            width: 4px;
+            border-radius: 2px;
+            position: absolute;
+        }
+        /* What's written in the bloc */
+        div#day_events > span > p {
+            position: absolute;
+            left: 9px;
+            top: 7px;
+            overflow-y: scroll;
+            width: calc(inherit); 
+            height: 82px;
+            line-height: 15px;
+            font-size: 12px;
+        }
+        div#day_events > span > p > br {
+            height: 30px;
         }
 
+
+        /* _________________ Footer _________________ */
+        footer > a {
+            height: 92px;
+            margin: 20px 30px;
+            border-radius: 12px;
+            background-color: #3B7ABA;
+            padding: 10px 20px 20px 20px;
+            box-sizing: border-box;
+            max-width: 677px;
+            color: white;
+            font-size: 11px;
+            font-weight: lighter;
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            justify-content: space-around;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        footer > a:first-child > p, footer > div:last-child > p {
+            transform: translateY(5px);
+        }
+        footer > a:last-child {
+            background-color: #FA6538;
+        }
+
+        footer > a:first-child:hover {
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+            background-color: #4896e4; 
+            transition: 0.5s;
+        }
+        footer > a:last-child:hover {
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+            background-color: #fd9171; 
+            transition: 0.5s;
+        }
+
+
+        /* _________________ Other _________________ */
         body {
             background-color: #F5F5F5;
+            padding-top: 186px;
+            padding-bottom: 30px;
         }
-    
+        strong {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        /* _________________ Responsive _________________ */
+        @media only screen and (max-width: 315px) {
+            img {
+                display: none;
+            }
+            footer > a {
+                overflow: auto;
+            }
+        }
+        @media only screen and (min-width: 740px) {
+            footer > a {
+                margin: 20px 0px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            h3.c_bleu0 {
+            margin-bottom: 30px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-338px);
+            width: 250px;
+            }
+            
+        }
 
     </style>
 
@@ -140,26 +243,33 @@
 
 <body>
 
-    <!-- Header and navigation bar -->
+    <!-- Header and Navigation Bar -->
     <nav>
         <!-- Header -->
+
+
         <div class ="header">
-            <h1>Bonjour, Paul</h1>
-            <div class ="search_box">
-                <table class="elementsContainer">
-                    <tr>
-                        <td>
-                            <input type="text" placeholder="Cherche ce dont tu as besoin..."
-                            class="search">
-                        </td>
-                        <td>
-                            <a href="#">
-                                <i class="material-icons">search</i>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
+            <div id=all>
+                <div>
+                    <p id=DATE>SAMEDI 30 MAI</p>
+                    <h1>Bonjour, Paul</h1>
+                </div>
+                <div class="boxContainer">
+                    <table a="elementsContainer">
+                        <tr>
+                            <td>
+                                <input type="text"
+                                placeholder="Cherche ce dont tu as besoin..."
+                                class="search"/>
+                            </td>
+                            <td>
+                                <a href="#"><i class="material-icons">search</i>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
+
         </div>
 
         <p id="bas"></p>
@@ -167,17 +277,17 @@
         <!-- Barre de navigation -->
         <div class ="nav">
             <!-- L'icône pour l'accueil (maison) -->
-            <a href="#" class="nav__link nav__link--activeBlue">
+            <a href="Homepage.html" class="nav__link nav__link--activeBlue">
                 <i class="material-icons nav__icon">home</i>
-                <span class="nav__text">Home</span>
+                <span class="nav__text">Accueil</span>
             </a>
             <!-- L'icône pour Explorer -->
-            <a href="#" class="nav__link">
+            <a href="Click_on_Explorer.html" class="nav__link">
                 <i class="material-icons nav__icon">explore</i>
                 <span class="nav__text">Explorer</span>
             </a>
             <!-- L'icône pour le profil -->
-            <a href="#" class="nav__link">
+            <a href="Profil.html" class="nav__link">
                 <i class="material-icons nav__icon">account_circle</i>
                 <span class="nav__text">Profil</span>
             </a>
@@ -185,75 +295,85 @@
 
     </nav>
 
-    <p id="top"></p>
+    <div>
+        <!-- Top of the page -->
+        <header>
+            <div id="top_page">
 
-    <!-- Top of the page -->
+                <h3 class="c_bleu0">Mon emploi du temps</h3>
 
-    <header>
-        <div id="top_page">
+                <div id="select"></div>
+                <!-- Dates of the week which change in function of which day we are. It's ordered in grid. -->
+                <!-- Grid made out of a column with the day and the date. -->
+                <div id="date"></div> 
+            </div>
+        </header>
 
-            <h3 class="c_bleu0">Mon emploi du temps</h3>
-    
-            <div id="select"></div>
-            <!-- Dates of the week which change in function of which day we are. It's ordered in grid. -->
-            <!-- Grid made out of a column with the day and the date. -->
-            <div id="date"></div> 
-        </div>
-    </header>
+        <!-- Schedule of the day -->
+        <main>
+            <div id="schedule_bloc" class="shadow3">
 
-    <main>
-        <div id="schedule_bloc" class="shadow3">
-            <span class="day_hour">
-                <p>9H</p>
-                <hr>
-            </span>
-            <span class="day_hour">
-                <p>10H</p>
-                <hr>
-            </span>
-            <span class="day_hour">
-                <p>11H</p>
-                <hr>
-            </span>
-            <span class="day_hour">
-                <p>12H</p>
-                <hr>
-            </span>
-            <span class="day_hour">
-                <p>13H</p>
-                <hr>
-            </span>
-            <span class="day_hour">
-                <p>14H</p>
-                <hr>
-            </span>
-            <span class="day_hour">
-                <p>15H</p>
-                <hr>
-            </span>
-            <span class="day_hour">
-                <p>16H</p>
-                <hr>
-            </span>
-            <span class="day_hour">
-                <p>17H</p>
-                <hr>
-            </span>
-            <span class="day_hour">
-                <p>18H</p>
-                <hr>
-            </span>
-        </div>
-    </main>
-    
+                <!-- The displayed events of the day -->
+                <div id="day_events">
+                </div>
 
-    <footer>
+                <span class="day_hour">
+                    <p>9H</p>
+                    <hr>
+                </span>
+                <span class="day_hour">
+                    <p>10H</p>
+                    <hr>
+                </span>
+                <span class="day_hour">
+                    <p>11H</p>
+                    <hr>
+                </span>
+                <span class="day_hour">
+                    <p>12H</p>
+                    <hr>
+                </span>
+                <span class="day_hour">
+                    <p>13H</p>
+                    <hr>
+                </span>
+                <span class="day_hour">
+                    <p>14H</p>
+                    <hr>
+                </span>
+                <span class="day_hour">
+                    <p>15H</p>
+                    <hr>
+                </span>
+                <span class="day_hour">
+                    <p>16H</p>
+                    <hr>
+                </span>
+                <span class="day_hour">
+                    <p>17H</p>
+                    <hr>
+                </span>
+                <span class="day_hour">
+                    <p>18H</p>
+                    <hr>
+                </span>
+            </div>
+            
+        </main>
 
-    </footer>
+        <!-- Below the schedule -->
+        <footer>
+            <a href="#">
+                <p><strong>Plannifier mes rendez-vous !</strong><br><br>Tu peux plannifier tes prochains rendez vous à l’aide du planning.</p>
+                <img src="../Ressources/Planning/male_character_1.png" alt="male_character_1">
+            </a>
+            <a href="#">
+                <p><strong>Modifier un rendez-vous !</strong><br><br>Tu peux modifier tes prochains rendez vous à l’aide du planning.</p>
+                <img src="../Ressources/Planning/male_character_2.png" alt="male_character_2">
+            </a>
+        </footer>
+    </div>
 
-    <p id="bottom"></p>
     <script src="../js/Planning.js"></script>
-
 </body>
-
 </html>
