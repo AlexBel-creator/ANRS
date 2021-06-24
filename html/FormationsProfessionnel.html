@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formation Professionnalisation</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <!-- CSS - reset -->
+        <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+        <!-- Les styles -->
+        <link rel="stylesheet" href="../css/styles.css">
+        <!-- La navbar -->
+        <link rel="stylesheet" href="../css/navbar.css">
+        <!-- Le header -->
+        <link rel="stylesheet" href="../css/header.css">
+        <!-- Les icones -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <style>
+            /* _______Start Part_______ */
+            body{
+                background-color: #F5F5F5;
+            }
+            #top{
+                height: 188px;
+            }
+            /* _______Horizontaly Scroll SecondMenu Bar_______ */
+            #ButtonContainer {
+                overflow: auto;
+                position: sticky;
+                white-space: nowrap;
+                margin-left: 20px;
+                margin-top: 17px;
+            }
+            #Button1, #Button2, #Button3 {
+                background: #FFFF;
+                color: #838795;
+                height: 40px;
+                border:none;
+                border-radius: 12px;
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 12px;
+                display: inline-block;
+                cursor:pointer;
+                margin-right: 5px;
+                transition: ease-out 1.2s;
+            }
+            #Button1{
+                width: 133px;
+            }
+            #Button2{
+                width: 183px;
+            }
+            #Button3{
+                width: 127px;
+            }
+            /* Animation Button  */
+            #Button1{
+                box-shadow: inset 0 0 0 0 #3B7ABA;
+            }
+            #Button1:hover{
+                color:#ffff;
+                background-color: #3B7ABA;
+            }
+            #Button2{
+                box-shadow: inset 0 0 0 0 #3B7ABA;
+            }
+            #Button2:hover{
+                color:#ffff;
+                background-color: #3B7ABA;
+            }
+            #Button3{
+                box-shadow: inset 0 0 0 0 #3B7ABA;
+            }
+            #Button3:hover{
+                color:#ffff;
+                background-color: #3B7ABA;
+            }
+            /* _______Accordion Toggle_______ */
+            input {
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
+            }
+            .accordion-wrapper {
+                border-radius: 12px;
+                overflow: hidden;
+                margin-top: 20px;
+                margin-left:20px;
+                margin-right: 20px;
+                max-width: 677px;
+            }
+            .accordion {
+                width: 100%;
+                color: #27527C;
+                line-height: 15px;
+                overflow: hidden;
+                margin-bottom: 9px;
+                border-radius: 12px;
+            }
+            .accordion:last-child{
+                margin-bottom: 0;
+            }
+            .accordion-label {
+                display: flex;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                padding: 16px;
+                background: white;
+                font-weight: 600;
+                cursor: pointer;
+                font-size: 14px;
+            }
+            .accordion-label:hover {
+                background: white;
+            }
+            .accordion-label::after {
+                content: "\276F";
+                color: #3B7ABA;
+                width: 16px;
+                height: 16px;
+                text-align: center;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+            .accordion-content {
+                max-height: 0;
+                padding: 0 16px;
+                color: rgba(4,57,94,1);
+                background: white;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+            .accordion-content p{
+                margin: 0;
+                color: #5A6072;
+                font-size: 13px;
+            }
+            input:checked + .accordion-label {
+                background:white;
+            }
+            input:checked + .accordion-label::after {
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            input:checked ~ .accordion-content {
+                max-height: 100vh;
+                padding: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p id="top"></p>
+
+        <!-- Header and navigation bar -->
+        <nav>
+            <!-- Header -->
+            <div class ="header">
+                <div>
+                    <p id="DATE">DATE</p>
+                    <h1>Bonjour, Paul</h1>
+                </div>
+                <div class="boxContainer">
+                    <table a="elementsContainer">
+                        <tr>
+                            <td>
+                                <input type="text"
+                                placeholder="Cherche ce dont tu as besoin..."
+                                class="search"/>
+                            </td>
+                            <td>
+                                <a href="#"><i class="material-icons">search</i>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <p id="bas"></p>
+
+            <!-- Barre de navigation -->
+            <div class ="nav">
+                <!-- L'icône pour l'accueil (maison) -->
+                <a href="#" class="nav__link nav__link--activeBlue">
+                    <i class="material-icons nav__icon">home</i>
+                    <span class="nav__text">Accueil</span>
+                </a>
+                <!-- L'icône pour Explorer -->
+                <a href="#" class="nav__link">
+                    <i class="material-icons nav__icon">explore</i>
+                    <span class="nav__text">Explorer</span>
+                </a>
+                <!-- L'icône pour le profil -->
+                <a href="#" class="nav__link">
+                    <i class="material-icons nav__icon">account_circle</i>
+                    <span class="nav__text">Profil</span>
+                </a>
+            </div>
+
+        </nav>
+
+        <!-- SubMenu Horizontally Scroll-->
+        <header>
+            <div id="ButtonContainer">
+                <button type="button" id=Button1>Ateliers métiers</button>
+                <button type="button" id=Button2>Ma professionnalisation</button>
+                <button type="button" id=Button3>Apprentissages</button>
+            </div>
+        </header>
+
+        <!-- Accordion Toggle -->
+        <!-- Inspired by : https://fr.igraal.com -->
+        <main>
+            <div class="accordion-wrapper">
+            <div class="accordion">
+                <input type="radio" name="radio-a" id="check1" checked>
+                <label class="accordion-label" for="check1">Comment bien s’intégrer à un groupe 👥 ?</label>
+                <div class="accordion-content">
+                    <p> Sed ut perspiciatis unde omnis iste natus error
+                        sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa
+                        quae ab illo inventore veritatis et quasi
+                        architecto beatae vitae dicta sunt expliSed ut
+                        perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion">
+                <input type="radio" name="radio-a" id="check2">
+                <label class="accordion-label" for="check2">Être à l’aise à l’oral 🗣</label>
+                <div class="accordion-content">
+                    <p>Sed ut perspiciatis unde omnis iste natus error
+                        sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa
+                        quae ab illo inventore veritatis et quasi
+                        architecto beatae vitae dicta sunt expliSed ut
+                        perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion">
+                <input type="radio" name="radio-a" id="check3">
+                <label class="accordion-label" for="check3">Comment bien se présenter 👋🏼 ?</label>
+                <div class="accordion-content">
+                    <p>Sed ut perspiciatis unde omnis iste natus error
+                        sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa
+                        quae ab illo inventore veritatis et quasi
+                        architecto beatae vitae dicta sunt expliSed ut
+                        perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion">
+                <input type="radio" name="radio-a" id="check4">
+                <label class="accordion-label" for="check4">Écouter son interlocuteur 👂🏼 ?</label>
+                <div class="accordion-content">
+                    <p>Sed ut perspiciatis unde omnis iste natus error
+                        sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa
+                        quae ab illo inventore veritatis et quasi
+                        architecto beatae vitae dicta sunt expliSed ut
+                        perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque.
+                    </p>
+                </div>
+            </div>
+            </div>
+
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>
