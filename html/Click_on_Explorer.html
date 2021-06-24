@@ -23,29 +23,28 @@
 
     <style>
         /* Icons and labels */
-        .Icons {
-            background-color: #F5F5F5;
+        main>div {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             justify-items: center;
             align-content: space-around;
             height: 80vh;
         }
-        .Label {
+        div>a>p {
             display: grid;
             justify-items: center;
             position: relative;
             text-align: center;
             top: 10px;
         }
-        img {
+        img.Icon {
             height: 81px;
         }
         a:link, a:visited {
             text-decoration: none;
             color: #27527C;
         }
-        nav>img {
+        main>div>img {
             position: relative;
             box-sizing: border-box;
             z-index: 1;
@@ -53,27 +52,86 @@
             top: 84px;
             left: 93px;
         }
+        main>div>a{
+            background-color: white;
+            padding: 25px;
+            margin: 10px 0px;
+            height: 100px;
+            width: 100px;
+            border-radius: 12px;
+            transition: .5s;
+        }
+        main>div>a:hover{
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+            transition: .5s;
+        }
 
         /* Centering of uncentered icons */
         #Communauté {
             position: relative;
-            left: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #Planning {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #Formation>img{
+            height: 81px;
+        }
+        #Progression>img{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
         #Infrastructures {
             position: relative;
-            left: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 81px;
         }
-        #Témoignages {
+        #Alumni>img {
             position: relative;
-            left: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #FAQ>img{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        div>a:last-child>img{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
         /* Other */
-        nav>p {
-            height: 116px;
+        body {
+            padding-top: 220px;
+            padding-bottom: 80px;
+            background-color: #F5F5F5;
         }
 
-        p#bas {
-            height: 30px;
+        /* Responsive */
+        @media only screen and (max-width: 330px){
+            main>div{
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding-bottom: 200px;
+            }
+        }
+        @media only screen and (min-width: 600px){
+            main>div{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media only screen and (min-width: 800px){
+            main>div{
+                grid-template-columns: repeat(4, 1fr);
+                height: 50vh;
+            }
         }
 
     </style>
@@ -103,63 +161,6 @@
             </div>
         </div>
 
-        <p></p>
-        <img src="../Ressources/Click on Explorer/Notifications.png" alt="Notifications">
-
-        <div class="Icons">
-
-            <!-- Community -->
-            <a href="#">
-                <img src="../Ressources/Click on Explorer/Communauté.png" alt="Communauté" id="Communauté">
-                <span class="Label c_bleu0">Communauté</span>
-            </a>
-
-            <!-- Planning -->
-            <a href="#">
-                <img src="../Ressources/Click on Explorer/Planning.png" alt="Planning">
-                <span class="Label c_bleu0">Planning</span>
-            </a>
-
-            <!-- Infrastructure -->
-            <a href="#">
-                <img src="../Ressources/Click on Explorer/Infrastructures.png" alt="Infrastructures" id="Infrastructures">
-                <span class="Label c_bleu0">Infrastructures</span>
-            </a>
-
-            <!-- Formations -->
-            <a href="#">
-                <img src="../Ressources/Click on Explorer/Formations.png" alt="Formations">
-                <span class="Label c_bleu0">Formations</span>
-            </a>
-
-            <!-- Progression -->
-            <a href="#">
-                <img src="../Ressources/Click on Explorer/Progression.png" alt="Progression">
-                <span class="Label c_bleu0">Progression</span>
-            </a>
-
-            <!-- Testimonies -->
-            <a href="#">
-                <img src="../Ressources/Click on Explorer/Témoignages.png" alt="Témoignages" id="Témoignages">
-                <span class="Label c_bleu0">Témoignages</span>
-            </a>
-
-            <!-- FAQ -->
-            <a href="#">
-                <img src="../Ressources/Click on Explorer/FAQ.png" alt="FAQ">
-                <span class="Label c_bleu0">FAQ</span>
-            </a>
-
-            <!-- Alumni network -->
-            <a href="#">
-                <img src="../Ressources/Click on Explorer/AlumniResaux_des_anciens.png" alt="Parrainage">
-                <span class="Label">Réseau des <br>anciens</span>
-            </a>
-
-        </div>
-
-        <p id="bas"></p>
-
         <!-- Navigation bar -->
         <div class ="nav">
             <!-- Icon for the home page (house) -->
@@ -180,6 +181,63 @@
         </div>
 
     </nav>
+
+    <main>
+        <div>
+
+            <!-- Community -->
+            <a href="#" class="Icon">
+                <img src="../Ressources/Click on Explorer/Communauté.png" alt="Communauté" id="Communauté">
+                <p class="c_bleu0">Communauté</p>
+            </a>
+    
+            <!-- Planning -->
+            <a href="Planning.html" class="Icon">
+                <img src="../Ressources/Click on Explorer/Planning.png" alt="Planning" id="Planning">
+                <p class="c_bleu0">Planning</p>
+            </a>
+    
+            <!-- Infrastructure -->
+            <a href="#" class="Icon">
+                <img src="../Ressources/Click on Explorer/Infrastructures.png" alt="Infrastructures" id="Infrastructures">
+                <p class="c_bleu0">Infrastructures</p>
+            </a>
+    
+            <!-- Formations -->
+            <a href="#" class="Icon" id="Formation">
+                <img src="../Ressources/Click on Explorer/Formations.png" alt="Formations">
+                <p class="c_bleu0">Formations</p>
+            </a>
+    
+            <!-- Progression -->
+            <a href="#" class="Icon" id="Progression">
+                <img src="../Ressources/Click on Explorer/Progression.png" alt="Progression">
+                <p class="c_bleu0">Progression</p>
+            </a>
+    
+            <!-- Testimonies -->
+            <a href="#" class="Icon" id="Alumni">
+                <img src="../Ressources/Click on Explorer/Témoignages.png" alt="Témoignages">
+                <p class="c_bleu0">Alumni</p>
+            </a>
+    
+            <!-- FAQ -->
+            <a href="#" class="Icon" id="FAQ">
+                <img src="../Ressources/Click on Explorer/FAQ.png" alt="FAQ">
+                <p class="c_bleu0">FAQ</p>
+            </a>
+    
+            <!-- Alumni network -->
+            <a href="#" class="Icon">
+                <img src="../Ressources/Click on Explorer/Apprentissage.png" alt="Apprentissage">
+                <p class="c_bleu0">Apprentissage</p>
+            </a>
+    
+        </div>
+    </main>
+
+    <p></p>
+    
 
 </body>
 
